@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/lifemate/auth")
@@ -26,7 +27,7 @@ public class AuthController {
     }
 */
     @PostMapping("/signUp")
-    public ResponseEntity<?> signUp(@Valid @ModelAttribute SignUpReqDto dto) {
-        return ResponseEntity.status(200).body(new CommonSuccessResponseDto("200", "회원가입 성공", authService.signUp(dto)));
+    public ResponseEntity<?> signUp(@Valid @ModelAttribute Map<String, Object> param) {
+        return ResponseEntity.status(200).body(new CommonSuccessResponseDto("200", "회원가입 성공", authService.signUp(param)));
     }
 }
