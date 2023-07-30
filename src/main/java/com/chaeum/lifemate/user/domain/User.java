@@ -9,5 +9,4 @@ public class User {
     private String kakaoId;
     private String phoneNumber;
 
-
 }

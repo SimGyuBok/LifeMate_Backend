@@ -8,4 +8,16 @@
         SELECT * FROM tb_user
     </select>
 
+    <insert id="insertUser">
+        INSERT INTO tb_user(
+        , kakao_id
+        , phone_number
+        , cre_dt
+        )
+        VALUES(
+        ,  #{kakaoId}
+        ,  #{phoneNumber}
+        ,  now()
+        )
+    </insert>
 </mapper>
