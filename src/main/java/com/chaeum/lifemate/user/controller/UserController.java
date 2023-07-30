@@ -18,4 +18,5 @@ public class UserController {
     public ResponseEntity<?> findAll() {
         return ResponseEntity.status(200).body(new CommonSuccessResponseDto("200", "findAll() 성공", userService.findAll()));
     }
+
 }
