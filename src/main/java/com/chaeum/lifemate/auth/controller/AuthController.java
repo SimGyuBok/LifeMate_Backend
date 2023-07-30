@@ -16,6 +16,8 @@ import javax.servlet.http.HttpServletRequest;
 public class AuthController {
     private final AuthService authService;
 
+
+    //jisu test
 /*
     @PostMapping("/login")
     public ResponseEntity<?> login(HttpServletRequest request, @Valid @RequestBody LoginKaKaoReqDto dto) {
