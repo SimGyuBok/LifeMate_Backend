@@ -3,9 +3,17 @@ spring:
     name: lifemate-rest-api
   profiles:
     active: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/lifemate?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+    username: root
+    password: glen0818!
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
 server:
   port: 8888
+
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
 
 ---
 
@@ -14,6 +22,15 @@ spring:
     name: lifemate-rest-api
   profiles:
     active: prod
+  # datasource 설정
+  datasource:
+    url: jdbc:mysql://localhost:3306/lifemate?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+    username: root
+    password: glen0818!
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
 server:
   port: 8888
+
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
