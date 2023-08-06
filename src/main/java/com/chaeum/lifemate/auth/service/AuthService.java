@@ -22,7 +22,7 @@ public class AuthService {
     @Autowired
     UserMapper userMapper;
 
-    public Object signUp(Map<String, Object> param) {
+    public Object signUp(HashMap<String, Object> param) {
         userMapper.insertUser(param); // 1
         return null;
     }

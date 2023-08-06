@@ -20,5 +20,5 @@ public interface UserMapper {
     //void updateUser(UserVo userVo); // 회원 정보 수정
     //void deleteUser(Long id); // 회원 탈퇴
     ArrayList<HashMap<String, Object>> findAll();
-    void insertUser(Map<String, Object> param);
+    void insertUser(HashMap<String, Object> param);
 }
